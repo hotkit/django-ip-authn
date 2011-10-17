@@ -9,7 +9,7 @@ from django.contrib import auth
 class Authenticate:
     def authenticate(self, **kwargs):
         if kwargs.get('ip_authentication', False):
-            return auth.models.User.objects.get(pk=1)
+            return self.get_user(1)
 
     def get_user(self, user_id):
         try:
