@@ -11,7 +11,7 @@ def read(fname1, fname2):
 
 setup(
     name = "django_ip_authn",
-    version = "0.1.0.1",
+    version = "0.2",
     author = "Kirit Saelensminde",
     author_email = "kirit@felspar.com",
     description = ("IP number based authentication for Django"),
