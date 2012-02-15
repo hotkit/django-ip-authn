@@ -15,7 +15,6 @@ setup(
     keywords = "django authn authentication ip",
     packages = ['django_ip_authn'],
     long_description = read('README.markdown'),
-    install_requires = ['simplejson', 'httplib2'],
     classifiers = [
         "Development Status :: 3 - Alpha",
         "Framework :: Django",
