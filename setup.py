@@ -14,6 +14,7 @@ setup(
     version = "0.2",
     author = "Kirit Saelensminde",
     author_email = "kirit@felspar.com",
+    url = 'https://github.com/Felspar/django-ip-authn',
     description = ("IP number based authentication for Django"),
     long_description = read('README','README.markdown'),
     license = "Boost Software License - Version 1.0 - August 17th, 2003",
