@@ -25,7 +25,7 @@ setup(
         "Intended Audience :: Developers",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        "License :: OSI Approved :: Boost Software License - Version 1.0 - August 17th, 2003",
+        "License :: OSI Approved",
     ],
     packages = ['django_ip_authn'],
 )
