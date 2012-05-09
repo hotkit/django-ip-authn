@@ -1,3 +1,6 @@
+2012-05-09  Kirit Saelensminde  <kirit@felspar.com>
+ If there is no REMOTE_ADDR  in the request.META then never authenticate.
+
 2011-10-17  Kirit Saelensminde  <kirit@felspar.com>
  Added proper handling for users that don't exist.
  Added ChangeLog.
