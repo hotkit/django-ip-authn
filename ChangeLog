@@ -1,3 +1,6 @@
+2012-05-10  Kirit Saelensminde  <kirit@felspar.com>
+ Fixed an idiotic bug due to there being no unit tests.
+
 2012-05-09  Kirit Saelensminde  <kirit@felspar.com>
  If there is no REMOTE_ADDR  in the request.META then never authenticate.
 
