@@ -32,4 +32,4 @@ class Middleware:
                 logging.info("IP authenticatoin for IP number %s worked, but a user was not found",
                     remote_ip)
         else:
-            logging.error("IP authentication FAILED for IP number %s", remote_ip)
+            logging.warning("IP authentication FAILED for IP number %s", remote_ip)
