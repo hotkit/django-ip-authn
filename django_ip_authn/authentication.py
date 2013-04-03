@@ -20,7 +20,8 @@ class Authenticate:
 
 class Middleware:
     def process_request(self, request):
-        remote_ip = request.META.get('REMOTE_ADDR', None)
+        header = getattr(settings, 'REMOTE_IP_HEADER', 'REMOTE_ADDR')
+        remote_ip = request.META.get(header, None)
         valid_ips = getattr(settings, 'VALID_IP_NUMBERS', [])
         if remote_ip and remote_ip in valid_ips:
             user = auth.authenticate(request = request, ip_authentication = True)
