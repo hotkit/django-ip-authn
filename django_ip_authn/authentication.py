@@ -20,7 +20,8 @@ class Authenticate:
 
 class Middleware:
     def process_request(self, request):
-        remote_ip = request.META.get('REMOTE_ADDR', None)
+        header = getattr(settings, 'REMOTE_IP_HEADER', 'REMOTE_ADDR')
+        remote_ip = request.META.get(header, None)
         valid_ips = getattr(settings, 'VALID_IP_NUMBERS', [])
         if remote_ip and remote_ip in valid_ips:
             user = auth.authenticate(request = request, ip_authentication = True)
@@ -31,4 +32,6 @@ class Middleware:
                 logging.info("IP authenticatoin for IP number %s worked, but a user was not found",
                     remote_ip)
         else:
-            logging.error("IP authentication FAILED for IP number %s", remote_ip)
+            logging.warning(
+                "IP authentication FAILED for IP number %s (headers are %s)",
+                remote_ip, request.META.keys())
